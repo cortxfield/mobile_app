@@ -1,25 +1,30 @@
-## CorteXField Mobile Application is an open-source project based on [Flutter](https://flutter.dev/)
-Powered by CorteXField IoT Platform
+# CorteXField Mobile App
 
-Build your own IoT mobile application **with minimum coding efforts**
+CorteXField Mobile App is the Flutter mobile client for the CorteXField agricultural IoT platform at [cortexfield.com](https://cortexfield.com/).
 
-## Please be informed the Web platform is not supported, because it's a part of our main platform!
+It is built for field teams and operators who need mobile access to farm telemetry, dashboards, alerts, and device workflows. The app supports CorteXField deployments focused on real-time monitoring, secure data access, intelligent control, analytics, sustainability, and custom integration across agriculture use cases such as aquaculture, hydroponics, livestock, and open-field operations.
 
-## Resources
+## Project Origin
 
-- [Getting started](https://thingsboard.io/docs/mobile/getting-started/) - learn how to set up and run your first IoT mobile app
-- [Customize your app](https://thingsboard.io/docs/mobile/customization/) - learn how to customize the app
-- [Publish your app](https://thingsboard.io/docs/mobile/release/) - learn how to publish app to Google Play or App Store
+This repository is a CorteXField-branded derivative of the open-source [ThingsBoard Mobile Application](https://github.com/thingsboard/flutter_thingsboard_app), built with [Flutter](https://flutter.dev/).
 
-## Private build configuration
+The upstream ThingsBoard copyright and license notice are preserved in [LICENSE](LICENSE). When distributing source or binaries, keep the license notice and disclaimer with the app materials. CorteXField is not affiliated with or endorsed by ThingsBoard, and the ThingsBoard name, trademarks, or contributors must not be used to imply endorsement without written permission.
 
-`configs.json` contains environment-specific values and secrets, so it is ignored by Git. Use `configs.example.json` as the template for local builds and pass the real file to Flutter:
+## Build
+
+Build instructions are maintained in [HOW_TO_BUILD.md](HOW_TO_BUILD.md).
+
+The real `configs.json` file contains deployment-specific values and secrets and must not be committed. Use [configs.example.json](configs.example.json) as a template for local builds.
+
+## Private Configuration
+
+`configs.json` is ignored by Git. For local builds, create it from `configs.example.json` and pass it to Flutter:
 
 ```sh
 flutter build apk --dart-define-from-file=configs.json
 ```
 
-For GitHub Actions, add these repository or organization secrets:
+For GitHub Actions, store sensitive values as repository or organization secrets:
 
 - `APP_ENDPOINT`
 - `THINGSBOARD_ANDROID_APP_SECRET`
@@ -35,8 +40,11 @@ Optional non-secret repository or organization variables:
 - `IOS_APPLICATION_NAME`
 - `THINGSBOARD_OAUTH2_CALLBACK_URL_SCHEME`
 
-## Live demo app
+The Android CI workflow generates `configs.json` at build time from those secrets and variables.
 
-To be familiar with common app features, review the upstream live demo application available on Google Play and App Store
-- [Get it on Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
-- [Download on the App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695?itsct=apps_box_badge&amp;itscg=30200)
+## Upstream Resources
+
+- [ThingsBoard Mobile App docs](https://thingsboard.io/docs/mobile/getting-started/)
+- [ThingsBoard app customization](https://thingsboard.io/docs/mobile/customization/)
+- [Publishing guide](https://thingsboard.io/docs/mobile/release/)
+- [Upstream repository](https://github.com/thingsboard/flutter_thingsboard_app)
