@@ -1,0 +1,12 @@
+{
+  "thingsboardApiEndpoint": "https://thingsboard.example.com",
+  "appLinksUrlHost": "thingsboard.example.com",
+  "appLinksUrlScheme": "https",
+  "androidApplicationId": "com.example.app",
+  "androidApplicationName": "Example App",
+  "iosApplicationId": "com.example.app",
+  "iosApplicationName": "Example App",
+  "thingsboardOAuth2CallbackUrlScheme": "com.example.app.auth",
+  "thingsboardAndroidAppSecret": "REPLACE_WITH_GITHUB_SECRET_THINGSBOARD_ANDROID_APP_SECRET",
+  "thingsboardIosAppSecret": "REPLACE_WITH_GITHUB_SECRET_THINGSBOARD_IOS_APP_SECRET"
+}
