@@ -54,9 +54,9 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `ThingsBoard`
+  /// `CorteXField`
   String get appTitle {
-    return Intl.message('ThingsBoard', name: 'appTitle', desc: '', args: []);
+    return Intl.message('CorteXField', name: 'appTitle', desc: '', args: []);
   }
 
   /// `Home`
@@ -161,10 +161,10 @@ class S {
     return Intl.message('Log In', name: 'login', desc: '', args: []);
   }
 
-  /// `ThingsBoard Logo`
+  /// `CorteXField Logo`
   String get logoDefaultValue {
     return Intl.message(
-      'ThingsBoard Logo',
+      'CorteXField Logo',
       name: 'logoDefaultValue',
       desc: '',
       args: [],
